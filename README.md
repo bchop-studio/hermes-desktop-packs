@@ -1,5 +1,7 @@
 # Hermes Desktop Packs
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 50 full-palette themes for the **Hermes Desktop app**, built from the [bchop-studio hermes-skins-pack](https://github.com/bchop-studio/hermes-skins-pack).
 
 A regular skin changes the CLI and TUI, and nudges the desktop with a basic color conversion. A **pack** maps the whole skin palette into Hermes Desktop, surface by surface: background, cards, sidebar, borders, text, accents, success, warning, error, and the integrated terminal. One click, the whole app becomes the skin.
@@ -24,6 +26,8 @@ These packs change Hermes Desktop only. They never touch your operating system, 
 ## Source
 
 Palettes are generated from the 50 skins in [bchop-studio/hermes-skins-pack](https://github.com/bchop-studio/hermes-skins-pack). Every pack keeps the skin's own background, text, accent, border, tool, success, warning, and error colors, plus its terminal palette.
+
+Browse the full list with contrast ratios in [themes/](themes/).
 
 ## Verify
 
