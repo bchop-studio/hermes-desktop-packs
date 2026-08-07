@@ -1,5 +1,7 @@
 # Hermes Desktop Packs
 
+![Hermes Desktop Packs cover](hermes-desktop-packs.png)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 50 full-palette themes for the **Hermes Desktop app**, built from the [bchop-studio hermes-skins-pack](https://github.com/bchop-studio/hermes-skins-pack).
@@ -51,3 +53,7 @@ Checks every pack against its source skin, the compact grid, the scoped semantic
 MIT. See `LICENSE`.
 
 Made by [@BChopLXXXII](https://github.com/BeardedChop)
+
+Built for vibe coders who want their AI to feel less corporate.
+
+If this helped, ⭐ the repo — it helps others find it.
