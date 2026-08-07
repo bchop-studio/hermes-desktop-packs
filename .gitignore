@@ -1,0 +1,16 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Local development output
+node_modules/
+dist/
+artifacts/
+.dfg/
+
+# System junk
+.DS_Store
+Thumbs.db
+*.Zone.Identifier
+*:Zone.Identifier
