@@ -29,6 +29,15 @@ Palettes are generated from the 50 skins in [bchop-studio/hermes-skins-pack](htt
 
 Browse the full list with contrast ratios in [themes/](themes/).
 
+## Repository Contents
+
+- `desktop-plugin/hermes-desktop-packs/plugin.js`, the pack engine and Packs page
+- `themes/README.md`, all 50 packs with mode and WCAG contrast
+- `tests/test_plugin.py`, the contract every pack must pass
+- `VERSION`, current pack version
+- `CONTRIBUTING.md`, how to add or fix a pack
+- `LICENSE`, MIT
+
 ## Verify
 
 ```bash
@@ -36,3 +45,9 @@ python3 tests/test_plugin.py
 ```
 
 Checks every pack against its source skin, the compact grid, the scoped semantic layer, and confirms no OS-level controls exist.
+
+## License
+
+MIT. See `LICENSE`.
+
+Made by [@BChopLXXXII](https://github.com/BeardedChop)
