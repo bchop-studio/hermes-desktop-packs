@@ -52,7 +52,7 @@ Checks every pack against its source skin, the compact grid, the scoped semantic
 
 MIT. See `LICENSE`.
 
-Made by [@BChopLXXXII](https://github.com/BeardedChop)
+Made by [bchop-studio](https://github.com/bchop-studio)
 
 Built for vibe coders who want their AI to feel less corporate.
 
