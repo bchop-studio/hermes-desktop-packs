@@ -9,14 +9,15 @@ Every pack is generated from a skin in [bchop-studio/hermes-skins-pack](https://
 ## Add or change a pack
 
 1. Open an issue or PR in the skins pack first. The palette lives there.
-2. Once the skin is merged, regenerate the desktop packs from the updated skins.
-3. Run the contract test: `python3 tests/test_plugin.py`. It must pass.
-4. Open a PR here with the regenerated plugin.
+2. Once the skin is merged, run `python3 scripts/generate_packs.py` from this repo.
+3. Run `python3 tests/test_plugin.py` and `python3 scripts/generate_packs.py --check`. Both must pass.
+4. Open a PR here with the regenerated plugin, catalog, and version update.
 
 ## Rules
 
 - One pack per skin. The source skin is the single source of truth.
-- Every pack must pass the full contrast audit. The test enforces it.
+- Foreground text on desktop surfaces and controls must pass WCAG contrast checks.
+- Palette-authority roles stay exact: accents, tools, borders, success, warning, and error colors are never replaced with look-alikes.
 - Packs change Hermes Desktop only. Nothing may touch the operating system, wallpaper, cursor, icons, registry, or terminal settings. The test blocks those strings.
 - No placeholder themes. A pack that doesn't map the full source palette isn't a pack.
 

@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-50 full-palette themes for the **Hermes Desktop app**, built from the [bchop-studio hermes-skins-pack](https://github.com/bchop-studio/hermes-skins-pack).
+100 full-palette themes for the **Hermes Desktop app**, built from the [bchop-studio hermes-skins-pack](https://github.com/bchop-studio/hermes-skins-pack).
 
 A regular skin changes the CLI and TUI, and nudges the desktop with a basic color conversion. A **pack** maps the whole skin palette into Hermes Desktop, surface by surface: background, cards, sidebar, borders, text, accents, success, warning, error, and the integrated terminal. One click, the whole app becomes the skin.
 
@@ -27,14 +27,15 @@ These packs change Hermes Desktop only. They never touch your operating system, 
 
 ## Source
 
-Palettes are generated from the 50 skins in [bchop-studio/hermes-skins-pack](https://github.com/bchop-studio/hermes-skins-pack). Every pack keeps the skin's own background, text, accent, border, tool, success, warning, and error colors, plus its terminal palette.
+Palettes are generated from the 100 skins in [bchop-studio/hermes-skins-pack](https://github.com/bchop-studio/hermes-skins-pack). Every pack keeps the skin's own background, text, accent, border, tool, success, warning, and error colors, plus its terminal palette.
 
 Browse the full list with contrast ratios in [themes/](themes/).
 
 ## Repository Contents
 
 - `desktop-plugin/hermes-desktop-packs/plugin.js`, the pack engine and Packs page
-- `themes/README.md`, all 50 packs with mode and WCAG contrast
+- `themes/README.md`, all 100 packs with mode and WCAG contrast
+- `scripts/generate_packs.py`, the repeatable source-to-Desktop generator
 - `tests/test_plugin.py`, the contract every pack must pass
 - `VERSION`, current pack version
 - `CONTRIBUTING.md`, how to add or fix a pack
@@ -44,6 +45,7 @@ Browse the full list with contrast ratios in [themes/](themes/).
 
 ```bash
 python3 tests/test_plugin.py
+python3 scripts/generate_packs.py --check
 ```
 
 Checks every pack against its source skin, the compact grid, the scoped semantic layer, and confirms no OS-level controls exist.
