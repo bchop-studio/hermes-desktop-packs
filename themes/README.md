@@ -1,6 +1,6 @@
 # Themes
 
-100 packs generated from the source skins, 21 light and 79 dark. Contrast is foreground on background, measured WCAG.
+101 packs generated from the source skins, 21 light and 80 dark. Contrast is foreground on background, measured WCAG.
 
 | Pack | Source skin | Mode | Contrast |
 |---|---|---|---|
@@ -35,6 +35,7 @@
 | Deep Ocean | `deep-ocean` | ☾ dark | 13.5:1 |
 | Deep Void | `deep-void` | ☾ dark | 8.6:1 |
 | Desert Neon | `desert-neon` | ☾ dark | 13.6:1 |
+| Dracula | `dracula` | ☾ dark | 13.4:1 |
 | Dragon Blood | `dragon-blood` | ☾ dark | 12.6:1 |
 | Dusty Rose | `dusty-rose` | ☾ dark | 11.6:1 |
 | Eclipse | `eclipse` | ☾ dark | 11.6:1 |

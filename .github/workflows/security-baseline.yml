@@ -1,0 +1,69 @@
+name: Security Baseline
+
+on:
+  pull_request:
+  push:
+    branches: ["main"]
+  schedule:
+    - cron: "17 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: security-baseline-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out desktop packs
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          path: hermes-desktop-packs
+
+      - name: Check out source skins
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          repository: bchop-studio/hermes-skins-pack
+          path: hermes-skins-pack
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: "3.14"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version: "22"
+
+      - name: Verify generated packs
+        working-directory: hermes-desktop-packs
+        shell: bash
+        run: |
+          python tests/test_plugin.py
+          python scripts/generate_packs.py --check
+          python -m py_compile scripts/generate_packs.py tests/test_plugin.py
+          node --check desktop-plugin/hermes-desktop-packs/plugin.js
+
+      - name: Block obvious secret files
+        working-directory: hermes-desktop-packs
+        run: |
+          set -euo pipefail
+          if find . \
+            -path ./.git -prune -o \
+            -type f \( \
+              -name '.env' -o \
+              -name '.env.*' -o \
+              -name '*.pem' -o \
+              -name '*.key' -o \
+              -name 'id_rsa' -o \
+              -name 'id_ed25519' \
+            \) -print | grep .; then
+            echo "Potential secret file committed. Remove it before merging."
+            exit 1
+          fi
