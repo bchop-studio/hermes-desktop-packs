@@ -629,6 +629,26 @@ const fullThemes = [
     semantic: { ok: '#40e880', warn: '#ffb800', error: '#ff4088', tool: '#00e8e8' }
   },
   {
+    name: 'pack-dracula', label: 'Dracula Pack', description: 'Full desktop pack from the dracula Hermes skin.',
+    colors: {
+      background: '#282a36', foreground: '#f8f8f2', card: '#21222c', cardForeground: '#f8f8f2',
+      muted: '#3d3f49', mutedForeground: '#aaabae', popover: '#44475a', popoverForeground: '#f8f8f2',
+      primary: '#8be9fd', primaryForeground: '#282a36', secondary: '#44475a', secondaryForeground: '#f8f8f2',
+      accent: '#ffb86c', accentForeground: '#282a36', border: '#44475a', input: '#21222c', ring: '#ffb86c',
+      midground: '#8be9fd', midgroundForeground: '#282a36', composerRing: '#ffb86c',
+      destructive: '#ff5555', destructiveForeground: '#282a36',
+      sidebarBackground: '#21222c', sidebarBorder: '#44475a', userBubble: '#44475a', userBubbleBorder: '#ffb86c'
+    },
+    darkColors: null,
+    terminal: {
+      foreground: '#f8f8f2', cursor: '#ffb86c', selectionBackground: '#44475a', black: '#282a36',
+      red: '#ff5555', green: '#50fa7b', yellow: '#f1fa8c', blue: '#ffb86c', magenta: '#8be9fd', cyan: '#f8f8f2', white: '#f8f8f2',
+      brightBlack: '#34363f', brightRed: '#ff5555', brightGreen: '#50fa7b', brightYellow: '#f1fa8c',
+      brightBlue: '#ffb86c', brightMagenta: '#bd93f9', brightCyan: '#f8f8f2', brightWhite: '#f8f8f2'
+    },
+    semantic: { ok: '#50fa7b', warn: '#f1fa8c', error: '#ff5555', tool: '#ffb86c' }
+  },
+  {
     name: 'pack-dragon-blood', label: 'Dragon Blood Pack', description: 'Full desktop pack from the dragon-blood Hermes skin.',
     colors: {
       background: '#141010', foreground: '#e0d0c0', card: '#141010', cardForeground: '#e0d0c0',

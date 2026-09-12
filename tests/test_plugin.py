@@ -35,11 +35,12 @@ def test_plugin_registers_full_desktop_packs_from_every_bchop_skin():
     plugin = PLUGIN.read_text(encoding="utf-8").lower()
     skin_names = sorted(path.stem for path in SKINS.glob("*.yaml"))
 
-    assert len(skin_names) == 100
+    assert skin_names, "No source skins found"
+    expected_count = len(skin_names)
     assert "const fullthemes" in plugin
-    assert plugin.count("darkcolors: null") == 100
-    assert plugin.count("terminal: {") == 100
-    assert plugin.count("semantic: {") == 100
+    assert plugin.count("darkcolors: null") == expected_count
+    assert plugin.count("terminal: {") == expected_count
+    assert plugin.count("semantic: {") == expected_count
     assert "theme.darkcolors = theme.colors" in plugin
     assert "theme.colors.midground =" not in plugin
 
